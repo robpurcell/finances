@@ -1,0 +1,4 @@
+sudo: false
+jdk:
+  - oraclejdk8
+services: mongodb
