@@ -1,4 +1,6 @@
 sudo: false
+env:
+  - SPRING_DATA_MONGODB_URI=mongodb://localhost/spring-test
 jdk:
   - oraclejdk8
 services: mongodb
