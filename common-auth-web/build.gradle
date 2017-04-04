@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+dependencies {
+    compile project(":common-auth")
+    compile project(":common")
+
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-security:$springBootVersion"
+
+    testCompile project(":testutil")
+
+    testCompile "junit:junit:4.12"
+    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+}

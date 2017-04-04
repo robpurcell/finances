@@ -1,0 +1,61 @@
+apigateway:
+  extends:
+    file: docker-compose-common.yml
+    service: apigateway
+  links:
+    - accountsservice
+    - transactionsservice
+    - accountsviewservice
+    - customersservice
+    - customersviewservice
+    - mongodb
+
+accountsservice:
+  extends:
+    file: docker-compose-common.yml
+    service: accountsservice
+  environment:
+    EVENTUATE_API_KEY_ID: ${EVENTUATE_API_KEY_ID}
+    EVENTUATE_API_KEY_SECRET: ${EVENTUATE_API_KEY_SECRET}
+
+transactionsservice:
+  extends:
+    file: docker-compose-common.yml
+    service: transactionsservice
+  environment:
+    EVENTUATE_API_KEY_ID: ${EVENTUATE_API_KEY_ID}
+    EVENTUATE_API_KEY_SECRET: ${EVENTUATE_API_KEY_SECRET}
+
+
+accountsviewservice:
+  extends:
+    file: docker-compose-common.yml
+    service: accountsviewservice
+  links:
+    - mongodb
+  environment:
+    EVENTUATE_API_KEY_ID: ${EVENTUATE_API_KEY_ID}
+    EVENTUATE_API_KEY_SECRET: ${EVENTUATE_API_KEY_SECRET}
+
+customersservice:
+  extends:
+    file: docker-compose-common.yml
+    service: customersservice
+  environment:
+    EVENTUATE_API_KEY_ID: ${EVENTUATE_API_KEY_ID}
+    EVENTUATE_API_KEY_SECRET: ${EVENTUATE_API_KEY_SECRET}
+
+customersviewservice:
+  extends:
+    file: docker-compose-common.yml
+    service: customersviewservice
+  links:
+    - mongodb
+  environment:
+    EVENTUATE_API_KEY_ID: ${EVENTUATE_API_KEY_ID}
+    EVENTUATE_API_KEY_SECRET: ${EVENTUATE_API_KEY_SECRET}
+
+mongodb:
+  extends:
+    file: docker-compose-common.yml
+    service: mongodb

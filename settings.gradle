@@ -1,0 +1,10 @@
+include 'common'
+include 'common-auth'
+include 'common-auth-web'
+include 'testutil'
+include 'common-backend'
+include 'common-swagger'
+include 'accounts-service'
+include 'accounts-view-service'
+
+rootProject.name = 'finances'

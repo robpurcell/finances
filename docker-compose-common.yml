@@ -1,0 +1,54 @@
+apigateway:
+  build: ./api-gateway-service/
+  restart: unless-stopped
+  ports:
+    - "8080:8080"
+  environment:
+    SPRING_DATA_MONGODB_URI: mongodb://mongodb/mydb
+    ACCOUNTS_COMMANDSIDE_SERVICE_HOST: accountsservice
+    TRANSFERS_COMMANDSIDE_SERVICE_HOST: transactionsservice
+    ACCOUNTS_QUERYSIDE_SERVICE_HOST: accountsviewservice
+    CUSTOMERS_COMMANDSIDE_SERVICE_HOST: customersservice
+    CUSTOMERS_QUERYSIDE_SERVICE_HOST: customersviewservice
+
+
+accountsservice:
+  build: ./accounts-service/
+  restart: unless-stopped
+  ports:
+    - "8085:8080"
+
+transactionsservice:
+  build: ./transactions-service/
+  restart: unless-stopped
+  ports:
+    - "8082:8080"
+
+accountsviewservice:
+  build: ./accounts-view-service/
+  restart: unless-stopped
+  environment:
+    SPRING_DATA_MONGODB_URI: mongodb://mongodb/mydb
+  ports:
+    - "8081:8080"
+
+customersservice:
+  build: ./customers-service/
+  restart: unless-stopped
+  ports:
+    - "8083:8080"
+
+customersviewservice:
+  build: ./customers-view-service/
+  restart: unless-stopped
+  ports:
+    - "8084:8080"
+  environment:
+    SPRING_DATA_MONGODB_URI: mongodb://mongodb/mydb
+
+mongodb:
+  image: mongo:3.0.4
+  hostname: mongodb
+  command: mongod --smallfiles
+  ports:
+    - "27017:27017"
