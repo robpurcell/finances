@@ -1,19 +1,20 @@
 package com.robbyp.finances.service;
 
-import com.robbyp.finances.common.accounts.CreateAccountRequest;
-import com.robbyp.finances.common.accounts.CreateAccountResponse;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 import java.math.BigDecimal;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+import com.robbyp.finances.common.accounts.CreateAccountRequest;
+import com.robbyp.finances.common.accounts.CreateAccountResponse;
+
+@RunWith(SpringRunner.class)
 @SpringBootTest(
   classes = AccountsCommandSideServiceTestConfiguration.class,
   webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT

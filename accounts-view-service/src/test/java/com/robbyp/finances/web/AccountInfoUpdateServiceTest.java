@@ -1,13 +1,5 @@
 package com.robbyp.finances.web;
 
-import com.robbyp.finances.accountsviewservice.backend.AccountInfo;
-import com.robbyp.finances.accountsviewservice.backend.AccountInfoUpdateService;
-import com.robbyp.finances.accountsviewservice.backend.AccountQueryService;
-import com.robbyp.finances.accountsviewservice.backend.AccountViewBackendConfiguration;
-import com.robbyp.finances.backend.common.accounts.AccountCreditedEvent;
-import com.robbyp.finances.common.accounts.AccountChangeInfo;
-import com.robbyp.finances.common.accounts.AccountTransactionInfo;
-import com.robbyp.finances.common.transactions.TransferState;
 import io.eventuate.Int128;
 import io.eventuate.javaclient.spring.jdbc.EventuateJdbcEventStoreConfiguration;
 import io.eventuate.javaclient.spring.jdbc.IdGenerator;
@@ -19,16 +11,24 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
+import com.robbyp.finances.accountsviewservice.backend.AccountInfo;
+import com.robbyp.finances.accountsviewservice.backend.AccountInfoUpdateService;
+import com.robbyp.finances.accountsviewservice.backend.AccountQueryService;
+import com.robbyp.finances.accountsviewservice.backend.AccountViewBackendConfiguration;
+import com.robbyp.finances.backend.common.accounts.AccountCreditedEvent;
+import com.robbyp.finances.common.accounts.AccountChangeInfo;
+import com.robbyp.finances.common.accounts.AccountTransactionInfo;
+import com.robbyp.finances.common.transactions.TransferState;
+
 import static org.junit.Assert.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-//@SpringApplicationConfiguration(classes = AccountInfoUpdateServiceTest.AccountInfoUpdateServiceTestConfiguration.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class AccountInfoUpdateServiceTest {
 
