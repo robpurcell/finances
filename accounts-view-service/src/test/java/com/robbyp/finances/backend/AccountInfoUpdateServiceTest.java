@@ -1,4 +1,4 @@
-package com.robbyp.finances.web;
+package com.robbyp.finances.backend;
 
 import io.eventuate.Int128;
 import io.eventuate.javaclient.spring.jdbc.EventuateJdbcEventStoreConfiguration;

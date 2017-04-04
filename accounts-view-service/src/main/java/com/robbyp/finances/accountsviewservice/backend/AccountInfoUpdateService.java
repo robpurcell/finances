@@ -1,9 +1,6 @@
 package com.robbyp.finances.accountsviewservice.backend;
 
 import com.mongodb.WriteResult;
-import com.robbyp.finances.common.accounts.AccountChangeInfo;
-import com.robbyp.finances.common.accounts.AccountTransactionInfo;
-import com.robbyp.finances.common.transactions.TransferState;
 import io.eventuate.Int128;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +11,10 @@ import org.springframework.data.mongodb.core.query.Update;
 
 import java.math.BigDecimal;
 import java.util.Date;
+
+import com.robbyp.finances.common.accounts.AccountChangeInfo;
+import com.robbyp.finances.common.accounts.AccountTransactionInfo;
+import com.robbyp.finances.common.transactions.TransferState;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 

@@ -43,8 +43,10 @@ public class AccountQueryController {
   public ResponseEntity<AccountHistoryResponse> getTransactionsHistory(@PathVariable String accountId) {
     AccountInfo accountInfo = accountInfoQueryService.findByAccountId(accountId);
     List<AccountHistoryEntry> historyEntries = new ArrayList<>();
-    historyEntries.add(new AccountOpenInfo(accountInfo.getCreationDate(), AccountHistoryEntry.EntryType.account,
-                                           accountInfo.getChanges().get(0).getAmount()));
+    historyEntries.add(new AccountOpenInfo(accountInfo.getCreationDate(),
+                                           AccountHistoryEntry.EntryType.account,
+                                           accountInfo.getChanges().get(0).getAmount())
+    );
     accountInfo.getTransactions().forEach(historyEntries::add);
 
     return ResponseEntity.ok().body(new AccountHistoryResponse(historyEntries));
