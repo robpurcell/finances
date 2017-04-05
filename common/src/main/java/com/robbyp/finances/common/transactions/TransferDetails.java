@@ -1,4 +1,4 @@
-package com.robbyp.finances.common.events.transactions;
+package com.robbyp.finances.common.transactions;
 
 /*
 case class TransferDetails(fromAccountId : EntityIdentifier, toAccountId : EntityIdentifier, amount : BigDecimal)
