@@ -4,7 +4,7 @@ apply plugin: EventuateDependencyPlugin
 apply plugin: 'org.springframework.boot'
 
 dependencies {
-    compile project(":common-backend")
+    compile project(":common-events")
     compile project(":common-auth")
     compile project(":common-swagger")
 

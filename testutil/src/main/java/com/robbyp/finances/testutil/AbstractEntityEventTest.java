@@ -13,22 +13,23 @@ public abstract class AbstractEntityEventTest {
   @Test
   public void eventDefinitionsShouldBeCorrect() {
 
-    ReflectionUtils.doWithMethods(entityClass(), new ReflectionUtils.MethodCallback() {
-              @Override
-              public void doWith(Method method) throws IllegalArgumentException, IllegalAccessException {
-                Class eventClass = method.getParameterTypes()[0];
-                EventEntityUtil.toEntityType(eventClass);
-              }
-            },
-            new ReflectionUtils.MethodFilter() {
-              @Override
-              public boolean matches(Method method) {
-                return method.getName().startsWith("apply") &&
-                        method.getDeclaringClass() != Aggregate.class &&
-                        method.getDeclaringClass() != ReflectiveMutableCommandProcessingAggregate.class;
-              }
-            });
-
+    ReflectionUtils.doWithMethods(
+      entityClass(),
+      new ReflectionUtils.MethodCallback() {
+        @Override
+        public void doWith(Method method) throws IllegalArgumentException, IllegalAccessException {
+          Class eventClass = method.getParameterTypes()[0];
+          EventEntityUtil.toEntityType(eventClass);
+        }
+      },
+      new ReflectionUtils.MethodFilter() {
+        @Override
+        public boolean matches(Method method) {
+          return method.getName().startsWith("apply") &&
+            method.getDeclaringClass() != Aggregate.class &&
+            method.getDeclaringClass() != ReflectiveMutableCommandProcessingAggregate.class;
+        }
+      });
   }
 
   protected abstract Class<?> entityClass();

@@ -18,7 +18,8 @@ public class AccountViewBackendConfiguration {
   }
 
   @Bean
-  public AccountInfoUpdateService accountInfoUpdateService(AccountInfoRepository accountInfoRepository, MongoTemplate mongoTemplate) {
+  public AccountInfoUpdateService accountInfoUpdateService(AccountInfoRepository accountInfoRepository,
+                                                           MongoTemplate mongoTemplate) {
     return new AccountInfoUpdateService(accountInfoRepository, mongoTemplate);
   }
 
@@ -31,7 +32,5 @@ public class AccountViewBackendConfiguration {
   public QuerySideDependencyChecker querysideDependencyChecker(MongoTemplate mongoTemplate) {
     return new QuerySideDependencyChecker(mongoTemplate);
   }
-
-
 
 }

@@ -21,7 +21,7 @@ import com.robbyp.finances.accountsviewservice.backend.AccountInfo;
 import com.robbyp.finances.accountsviewservice.backend.AccountInfoUpdateService;
 import com.robbyp.finances.accountsviewservice.backend.AccountQueryService;
 import com.robbyp.finances.accountsviewservice.backend.AccountViewBackendConfiguration;
-import com.robbyp.finances.backend.common.accounts.AccountCreditedEvent;
+import com.robbyp.finances.common.events.accounts.AccountCreditedEvent;
 import com.robbyp.finances.common.accounts.AccountChangeInfo;
 import com.robbyp.finances.common.accounts.AccountTransactionInfo;
 import com.robbyp.finances.common.transactions.TransferState;

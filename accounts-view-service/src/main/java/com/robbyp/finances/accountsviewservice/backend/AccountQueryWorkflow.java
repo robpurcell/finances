@@ -1,13 +1,5 @@
 package com.robbyp.finances.accountsviewservice.backend;
 
-import com.robbyp.finances.backend.common.accounts.*;
-import com.robbyp.finances.backend.common.transactions.CreditRecordedEvent;
-import com.robbyp.finances.backend.common.transactions.DebitRecordedEvent;
-import com.robbyp.finances.backend.common.transactions.FailedDebitRecordedEvent;
-import com.robbyp.finances.backend.common.transactions.MoneyTransferCreatedEvent;
-import com.robbyp.finances.common.accounts.AccountChangeInfo;
-import com.robbyp.finances.common.accounts.AccountTransactionInfo;
-import com.robbyp.finances.common.transactions.TransferState;
 import io.eventuate.DispatchedEvent;
 import io.eventuate.EventHandlerMethod;
 import io.eventuate.EventSubscriber;
@@ -16,6 +8,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
+
+import com.robbyp.finances.common.accounts.AccountChangeInfo;
+import com.robbyp.finances.common.accounts.AccountTransactionInfo;
+import com.robbyp.finances.common.events.accounts.*;
+import com.robbyp.finances.common.events.transactions.CreditRecordedEvent;
+import com.robbyp.finances.common.events.transactions.DebitRecordedEvent;
+import com.robbyp.finances.common.events.transactions.FailedDebitRecordedEvent;
+import com.robbyp.finances.common.events.transactions.MoneyTransferCreatedEvent;
+import com.robbyp.finances.common.transactions.TransferState;
 
 import static com.robbyp.finances.accountsviewservice.backend.MoneyUtil.toIntegerRepr;
 

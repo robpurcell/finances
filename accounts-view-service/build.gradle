@@ -6,7 +6,7 @@ apply plugin: 'spring-boot'
 
 dependencies {
     compile project(":common-swagger")
-    compile project(":common-backend")
+    compile project(":common-events")
 
     compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
