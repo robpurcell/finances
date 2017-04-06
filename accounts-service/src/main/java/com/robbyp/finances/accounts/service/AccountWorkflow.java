@@ -19,9 +19,9 @@ public class AccountWorkflow {
   @EventHandlerMethod
   public CompletableFuture<?> debitAccount(EventHandlerContext<MoneyTransferCreatedEvent> ctx) {
     MoneyTransferCreatedEvent event = ctx.getEvent();
+
     BigDecimal amount = event.getDetails().getAmount();
     String transactionId = ctx.getEntityId();
-
     String fromAccountId = event.getDetails().getFromAccountId();
 
     return ctx.update(Account.class, fromAccountId, new DebitAccountCommand(amount, transactionId));

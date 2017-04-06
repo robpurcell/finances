@@ -107,10 +107,10 @@ public class AccountQueryWorkflow {
     String fromAccountId = de.getEvent().getDetails().getFromAccountId();
     String toAccountId = de.getEvent().getDetails().getToAccountId();
 
-    accountInfoUpdateService
-      .updateTransactionStatus(fromAccountId, transactionId, TransferState.FAILED_DUE_TO_INSUFFICIENT_FUNDS);
-    accountInfoUpdateService
-      .updateTransactionStatus(toAccountId, transactionId, TransferState.FAILED_DUE_TO_INSUFFICIENT_FUNDS);
+    accountInfoUpdateService.updateTransactionStatus(
+      fromAccountId, transactionId, TransferState.FAILED_DUE_TO_INSUFFICIENT_FUNDS);
+    accountInfoUpdateService.updateTransactionStatus(
+      toAccountId, transactionId, TransferState.FAILED_DUE_TO_INSUFFICIENT_FUNDS);
   }
 
   public <T extends AccountChangedEvent> void saveChange(DispatchedEvent<T> de, int delta) {
