@@ -1,4 +1,4 @@
-package com.robbyp.finances.accountsviewservice.backend;
+package com.robbyp.finances.accountsview.service;
 
 
 import io.eventuate.javaclient.spring.EnableEventHandlers;

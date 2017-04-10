@@ -1,4 +1,4 @@
-package com.robbyp.finances.accountsviewservice.backend;
+package com.robbyp.finances.accountsview.service;
 
 public class AccountNotFoundException extends RuntimeException {
 

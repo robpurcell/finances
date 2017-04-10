@@ -1,4 +1,4 @@
-package com.robbyp.finances.accountsviewservice.backend;
+package com.robbyp.finances.accountsview.service;
 
 import com.mongodb.WriteResult;
 import io.eventuate.Int128;
@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.query.Update;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.robbyp.finances.common.MoneyUtil;
 import com.robbyp.finances.common.accounts.AccountChangeInfo;
 import com.robbyp.finances.common.accounts.AccountTransactionInfo;
 import com.robbyp.finances.common.transactions.TransferState;

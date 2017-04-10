@@ -1,4 +1,4 @@
-package com.robbyp.finances.accountsviewservice.web;
+package com.robbyp.finances.accountsview.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.robbyp.finances.accountsviewservice.backend.AccountInfo;
-import com.robbyp.finances.accountsviewservice.backend.AccountNotFoundException;
-import com.robbyp.finances.accountsviewservice.backend.AccountQueryService;
+import com.robbyp.finances.accountsview.service.AccountInfo;
+import com.robbyp.finances.accountsview.service.AccountNotFoundException;
+import com.robbyp.finances.accountsview.service.AccountQueryService;
 import com.robbyp.finances.common.accounts.AccountHistoryEntry;
 import com.robbyp.finances.common.accounts.AccountHistoryResponse;
 import com.robbyp.finances.common.accounts.AccountOpenInfo;

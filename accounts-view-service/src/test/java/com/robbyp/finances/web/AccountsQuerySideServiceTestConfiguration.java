@@ -1,6 +1,6 @@
 package com.robbyp.finances.web;
 
-import com.robbyp.finances.accountsviewservice.web.AccountViewWebConfiguration;
+import com.robbyp.finances.accountsview.web.AccountViewWebConfiguration;
 import com.robbyp.finances.commonswagger.CommonSwaggerConfiguration;
 import io.eventuate.javaclient.spring.jdbc.EmbeddedTestAggregateStoreConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

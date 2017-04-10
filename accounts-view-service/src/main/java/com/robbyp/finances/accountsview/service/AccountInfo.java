@@ -1,4 +1,4 @@
-package com.robbyp.finances.accountsviewservice.backend;
+package com.robbyp.finances.accountsview.service;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.robbyp.finances.common.accounts.AccountChangeInfo;

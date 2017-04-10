@@ -10,7 +10,7 @@ import com.robbyp.finances.accounts.commands.AccountCommand;
 
 @Configuration
 @EnableEventHandlers
-public class AccountsBackendConfiguration {
+public class AccountsConfiguration {
 
   @Bean
   public AccountWorkflow accountWorkflow() {

@@ -1,4 +1,4 @@
-package com.robbyp.finances.accountsviewservice.backend;
+package com.robbyp.finances.accountsview.service;
 
 import io.eventuate.DispatchedEvent;
 import io.eventuate.EventHandlerMethod;
@@ -18,7 +18,7 @@ import com.robbyp.finances.common.events.transactions.FailedDebitRecordedEvent;
 import com.robbyp.finances.common.events.transactions.MoneyTransferCreatedEvent;
 import com.robbyp.finances.common.transactions.TransferState;
 
-import static com.robbyp.finances.accountsviewservice.backend.MoneyUtil.toIntegerRepr;
+import static com.robbyp.finances.common.MoneyUtil.toIntegerRepr;
 
 @EventSubscriber(id = "querySideEventHandlers")
 public class AccountQueryWorkflow {

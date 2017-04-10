@@ -17,10 +17,10 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
-import com.robbyp.finances.accountsviewservice.backend.AccountInfo;
-import com.robbyp.finances.accountsviewservice.backend.AccountInfoUpdateService;
-import com.robbyp.finances.accountsviewservice.backend.AccountQueryService;
-import com.robbyp.finances.accountsviewservice.backend.AccountViewBackendConfiguration;
+import com.robbyp.finances.accountsview.service.AccountInfo;
+import com.robbyp.finances.accountsview.service.AccountInfoUpdateService;
+import com.robbyp.finances.accountsview.service.AccountQueryService;
+import com.robbyp.finances.accountsview.service.AccountViewBackendConfiguration;
 import com.robbyp.finances.common.events.accounts.AccountCreditedEvent;
 import com.robbyp.finances.common.accounts.AccountChangeInfo;
 import com.robbyp.finances.common.accounts.AccountTransactionInfo;
